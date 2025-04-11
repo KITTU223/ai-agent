@@ -68,6 +68,6 @@ app.post("/messages", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log("server running on http://localhost:3001");
+app.listen(process.env.PORT, () => {
+  console.log(`server running on http://localhost:${process.env.PORT}`);
 });
