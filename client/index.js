@@ -20,7 +20,7 @@ const rl = readline.createInterface({
 });
 
 mcpClient
-  .connect(new SSEClientTransport(new URL("http://localhost:3001/sse")))
+  .connect(new SSEClientTransport(new URL(process.env.SSE_URL)))
   .then(async () => {
     console.log("connected to MCP server");
 
